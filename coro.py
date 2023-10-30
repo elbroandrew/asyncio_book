@@ -10,8 +10,11 @@ def counter(n: int) -> int:
     print(n + 1)
 
 async def main():
-    counter(10)
+    print("running coro1")
     res1 = await print_response()
-
+    print("end running coro1")
+    print("running coro2")
+    res2 = await print_response()
+    print("end running coro2")
 
 asyncio.run(main())
